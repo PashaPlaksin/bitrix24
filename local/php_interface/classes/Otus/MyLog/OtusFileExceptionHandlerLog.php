@@ -10,6 +10,7 @@ class OtusFileExceptionHandlerLog extends FileExceptionHandlerLog
     public function write($exception, $logType)
     {
         $result = ExceptionHandlerFormatter::format($exception);
+
         return $result;
     }
 }
