@@ -11,7 +11,7 @@ class OtusFileExceptionHandlerLog extends FileExceptionHandlerLog
     {
         $result = ExceptionHandlerFormatter::format($exception);
 
-        return $result;
+
     }
 }
 
