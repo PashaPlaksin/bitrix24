@@ -34,7 +34,7 @@ return array(
                         'required_file' => 'php_interface/classes/MyLog/OtusFileExceptionHandlerLog.php',
                         'settings' =>
                             [
-                                'file' => 'logs/otus_exceptions.log',
+                                'file' => 'logs/otus_exceptions.txt',
                                 'log_size' => 1000000,
                             ],
                     ],

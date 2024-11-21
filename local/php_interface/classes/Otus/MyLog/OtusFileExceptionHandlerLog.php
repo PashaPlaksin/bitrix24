@@ -9,38 +9,42 @@ class OtusFileExceptionHandlerLog extends FileExceptionHandlerLog
 {
     public function write($exception, $logType)
     {
-        $result = ExceptionHandlerFormatter::format($exception);
+        $text = ExceptionHandlerFormatter::format($exception);
 
+        $context = [
+            'type' => static::logTypeToString($logType),
+        ];
 
+        $logLevel = static::logTypeToLevel($logType);
+        $message = "{date} - Host: {host} - {type} - {$text}\n";
+        $lines = explode("\n", $message);
+
+        foreach ($lines as &$line) {
+            $line = 'OTUS - ' . $line;
+        }
+
+        $message = implode("\n", $lines);
+        $this->logger->log($logLevel, $message, $context);
     }
 }
 
 /*
  * из модуля
- * public static function format($exception, $htmlMode = false, $level = 0)
+ * public function write($exception, $logType)
 	{
-		$formatter = new LogFormatter((bool)($level & static::SHOW_PARAMETERS), static::MAX_CHARS);
+		$text = ExceptionHandlerFormatter::format($exception, false, $this->level);
 
-		$result = '';
-		do
-		{
-			if ($result != '')
-			{
-				$result .= "Previous exception: ";
-			}
-			$result .= $formatter->format("{exception}{trace}{delimiter}\n", [
-				'exception' => $exception,
-				'trace' => static::getTrace($exception),
-			]);
-		}
-		while (($exception = $exception->getPrevious()) !== null);
+		$context = [
+			'type' => static::logTypeToString($logType),
+		];
 
-		if ($htmlMode)
-		{
-			$result = '<pre>'.Main\Text\HtmlFilter::encode($result).'</pre>';
-		}
+		$logLevel = static::logTypeToLevel($logType);
 
-		return $result;
+		$message = "{date} - Host: {host} - {type} - {$text}\n";
+
+		$this->logger->log($logLevel, $message, $context);
 	}
+
+
  *
  * */
