@@ -1,0 +1,53 @@
+/* Общий стиль для всех кнопок */
+p {
+    font: 26px/26px Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.submit-button {
+    width: 250px; /* Установите фиксированную ширину */
+    height: 70px; /* Установите фиксированную высоту */
+    font-size: 16px; /* Размер шрифта */
+    background-color: #4CAF50; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Радиус скругления */
+    cursor: pointer; /* Курсор указателя */
+    text-align: center; /* Выравнивание текста */
+    display: inline-block; /* Обеспечивает правильное выравнивание */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+.ad-submit-button {
+    width: 200px; /* Установите фиксированную ширину */
+    height: 50px; /* Установите фиксированную высоту */
+    font-size: 16px; /* Размер шрифта */
+    background-color: #228B22; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Радиус скругления */
+    cursor: pointer; /* Курсор указателя */
+    text-align: center; /* Выравнивание текста */
+    display: inline-block; /* Обеспечивает правильное выравнивание */
+}
+.ad-submit-button:hover {
+    background-color: #006400; /* Цвет кнопки при наведении */
+}
+.ad-doctor-submit-button {
+    width: 180px; /* Установите фиксированную ширину */
+    height: 30px; /* Установите фиксированную высоту */
+    font-size: 16px; /* Размер шрифта */
+    background-color: #228B22; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Радиус скругления */
+    cursor: pointer; /* Курсор указателя */
+    text-align: center; /* Выравнивание текста */
+    display: inline-block; /* Обеспечивает правильное выравнивание */
+}
+.ad-doctor-submit-button:hover {
+    background-color: #006400; /* Цвет кнопки при наведении */
+}
