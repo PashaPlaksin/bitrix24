@@ -37,7 +37,7 @@ class CBPDadataActivity extends BaseActivity
         $errors = parent::internalExecute();
 
         $inn = $this->INN;
-        $apiKey = "4d294e4038dc192215cc30d985440a3ef2bf259e";
+        $apiKey = "КЛЮЧ_API";
 
         if (!$inn) {
             $this->arProperties["RESPONSE"] = Loc::getMessage('DADATA_ACTIVITY_ERROR_INN');
