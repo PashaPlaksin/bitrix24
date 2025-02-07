@@ -19,7 +19,6 @@ class IblockDealHandler
 
         AddEventHandler('iblock', 'OnAfterIBlockElementAdd', [self::class, "onIBlockElementChange"]);
         AddEventHandler('iblock', 'OnAfterIBlockElementUpdate', [self::class, "onIBlockElementChange"]);
-        AddEventHandler('iblock', 'OnBeforeIBlockElementDelete', [self::class, "onIBlockElementDelete"]);
         AddEventHandler('crm', 'OnAfterCrmDealUpdate', [self::class, "onCrmDealChange"]);
     }
 
