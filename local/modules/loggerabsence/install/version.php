@@ -1,0 +1,4 @@
+<?php
+$arModuleVersion['ABSENCE_EVENT_LOGGER_VERSION'] = '1.0.0';
+$arModuleVersion['ABSENCE_EVENT_LOGGER_MODULE_VERSION_DATE'] = '2025-04-10 15:00:00';
+
