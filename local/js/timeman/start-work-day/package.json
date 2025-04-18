@@ -1,0 +1,19 @@
+{
+  "name": "start-work-day",
+  "version": "1.0.0",
+  "description": "Timeman start work day bundle",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "author": "Pavel Plaksin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-loader": "^9.1.0",
+    "source-map-loader": "^4.0.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
