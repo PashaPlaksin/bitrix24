@@ -22,3 +22,12 @@ IblockDealHandler::registerEvents();
 CustomRestHandler::registerEvents();
 
 \Bitrix\Main\UI\Extension::load('timeman.start-work-day');
+
+Bitrix\Main\EventManager::getInstance()->AddEventHandler(
+    'iblock',
+    'OnIBlockPropertyBuildList',
+    [
+        'Otus\CustomFields\BookingField',
+        'GetUserTypeDescription'
+    ]
+);
